@@ -2,14 +2,20 @@ import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
-import WelcomeMessage from './components/WelcomeMessage'; // ✅ NEW IMPORT
+import WelcomeMessage from './components/WelcomeMessage'; // Existing
+import Header from './components/Header';                 // ✅ New
+import MainContent from './components/MainContent';       // ✅ New
+import Footer from './components/Footer';                 // ✅ New
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <WelcomeMessage /> {/* ✅ NEW COMPONENT */}
+      <WelcomeMessage />
+      <Header />
+      <MainContent />
+      <Footer />
 
       <div>
         <a href="https://vite.dev" target="_blank">
@@ -30,9 +36,4 @@ function App() {
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
-}
-
-export default App;
+      </p
